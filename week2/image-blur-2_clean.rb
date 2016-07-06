@@ -28,9 +28,9 @@ class Image
 
     @image_to_blur = get_blur_coords(@image)
 
-    @image_to_blur.each do |x|
-      row = x[0]
-      column = x[1]
+      @image_to_blur.each do |pixel|
+      row = pixel[0]
+      column = pixel[1]
 
       if row != 0
         @image[row-1][column] = 1
